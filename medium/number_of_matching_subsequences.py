@@ -50,7 +50,6 @@ class Solution:
                     if temp_index > index:
                         words.pop()
                         break
-                    temp_index = index
                 except:
                     words.pop()
                     break
