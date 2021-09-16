@@ -22,7 +22,7 @@ class Mydict(UserDict):
         self.data = OrderedDict()
 
     def __setitem__(self, key, value):
-        if key in self.data:
+        if key in self:
             self.data[key].append(value)
         else:
             self.data[key] = [value]
