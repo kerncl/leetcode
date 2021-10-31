@@ -14,7 +14,13 @@ public:
         std::string final ="";
         for(int i=0; i<command.size(); i++){
             if (command[i] == 'G'){
-                NULL;
+                final += 'G';
+            } else if (command[i] == '(') {
+                if (command[i+1] == ')'){
+                    final += 'o';
+                } else if (command[i+1] == 'a'){
+                    final += "al";
+                }
             }
         }
         return final;
@@ -25,7 +31,8 @@ public:
 int main(){
     Solution mysolution;
     std::string command1 = "G()(al)";
-    mysolution.interpret(command1);
+    std::string myresult = mysolution.interpret(command1);
+    std::cout << myresult << std::endl;
     std::string ans1 = "Goal";
     std::string command2 = "G()()()()(al)";
     std::string ans2 = "Gooooal";
