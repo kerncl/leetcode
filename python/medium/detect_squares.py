@@ -93,7 +93,7 @@ if __name__ == '__main__':
             None, None, None, 0, None, None, 0, None, 0, 0, None, 0, None, 0, None, None, None, 0, None,
             None, None, 0, 0, 0, None, 0, None, None, None, None, None, 0, 0]
     detectSquares2 = DetectSquares()
-    for cmd,param,expected in zip(cmds, params, anss):
+    for cmd,param2,expected in zip(cmds2, params2, ans2):
         method = getattr(detectSquares2, cmd)
-        ans = method(param[0])
+        ans = method(param2[0])
         assert expected == ans, log.error(f'Expected ans: {expected}, but received: {ans}')
